@@ -3,6 +3,7 @@ import { Navbar } from '../../Components/Navbar'
 import { Button } from '../../Components/Button'
 import { Input } from '../../Components/Input'
 import { Textarea } from '../../Components/Textarea'
+import { Dropdown } from '../../Components/Dropdown'
 import styles from './index.module.css'
 
 const navigationLinks = [
@@ -55,6 +56,31 @@ const Components = () => {
           <Textarea label='Message' size='sm' variant='primary' required placeholder='Message' />
           <Textarea label='Message' size='md' variant='secondary' required placeholder='Message' />
           <Textarea label='Message' size='lg' variant='outline' disabled placeholder='Message' />
+        </div>
+        <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }} className={styles.container}>
+          <Dropdown 
+          label='Navigation'
+          size='sm'
+          options={[
+            { value: "1", label: "Home" },
+            { value: "2", label: "Docs" },
+            { value: "3", label: "Components" }
+          ]} />
+          <Dropdown 
+          label='Navigation'
+          size='md'
+          options={[
+            { value: "1", label: "Home" },
+            { value: "2", label: "Docs" },
+            { value: "3", label: "Components" }
+          ]} /><Dropdown 
+          label='Navigation'
+          size='lg'
+          options={[
+            { value: "1", label: "Home" },
+            { value: "2", label: "Docs" },
+            { value: "3", label: "Components" }
+          ]} />
         </div>
       </div>
   </section>

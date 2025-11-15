@@ -1,0 +1,141 @@
+.dropdownWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-fontColor-secondary);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.required {
+  color: #ef4444;
+}
+
+.selectWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.dropdown {
+  width: 100%;
+  font-family: var(--fontFamily);
+  border-radius: var(--color-borderRadius);
+  border: 1px solid var(--color-gray-300);
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  box-sizing: border-box;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23334155' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 12px;
+  padding-right: 36px;
+  cursor: pointer;
+}
+
+.dropdown:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.dropdown-sm {
+  max-width: 150px;
+  padding: 6px 32px 6px 12px;
+  font-size: 14px;
+  height: 32px;
+}
+
+.dropdown-md {
+  max-width: 300px;
+  padding: 10px 32px 10px 16px;
+  font-size: 15px;
+  height: 40px;
+}
+
+.dropdown-lg {
+  max-width: 450px;
+  padding: 12px 32px 12px 20px;
+  font-size: 16px;
+  height: 48px;
+}
+
+/* Variant styles */
+.dropdown-primary {
+  background-color: white;
+  color: var(--color-fontColor-primary);
+  border-color: var(--color-gray-300);
+}
+
+.dropdown-primary:focus {
+  border-color: var(--color-primary);
+}
+
+.dropdown-secondary {
+  background-color: var(--color-gray-100);
+  color: var(--color-fontColor-primary);
+  border-color: var(--color-gray-200);
+}
+
+.dropdown-secondary:focus {
+  border-color: var(--color-primary);
+  background-color: white;
+}
+
+.dropdown-outline {
+  background-color: transparent;
+  color: var(--color-fontColor-primary);
+  border-color: var(--color-primary);
+}
+
+.dropdown-outline:focus {
+  border-color: var(--color-hover-primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+/* States */
+.dropdown-disabled {
+  background-color: var(--color-gray-100);
+  color: var(--color-gray-300);
+  cursor: not-allowed;
+  opacity: 0.6;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23cbd5e1' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+}
+
+.dropdown-disabled:focus {
+  box-shadow: none;
+  border-color: var(--color-gray-300);
+}
+
+.dropdown-error {
+  border-color: #ef4444;
+}
+
+.dropdown-error:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.errorText {
+  font-size: 12px;
+  color: #ef4444;
+  margin-top: -4px;
+}
+
+/* Option styling */
+.dropdown option {
+  padding: 8px;
+  background-color: white;
+  color: var(--color-fontColor-primary);
+}
+
+.dropdown:disabled option {
+  color: var(--color-gray-300);
+}
+
