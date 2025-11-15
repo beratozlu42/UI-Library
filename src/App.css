@@ -1,0 +1,8 @@
+body {
+  background-color: var(--color-dark);
+}
+
+.Navbar {
+    position: sticky !important;
+    top: 0 !important;
+}

@@ -1,0 +1,85 @@
+.navbar {
+    margin: 0;
+    padding: 16px 24px;
+    height: 38px;
+    color: var(--color-fontColor-primary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+}
+.navbar-dark {
+    background-color: var(--color-dark);
+    color: var(--color-fontColor-secondary);
+
+    .navbarLink a {
+        text-decoration: none;
+        color: var(--color-fontColor-secondary);
+        transition: .3s;
+    }
+    .navbarLink a:hover {
+        color: var(--color-hover-secondary);
+    }
+}
+.navbar-light {
+    background-color: var(--color-gray-100);
+    color: var(--color-fontColor-primary);
+
+    .navbarLink a {
+        text-decoration: none;
+        color: var(--color-fontColor-primary);
+        transition: .3s;
+    }
+    .navbarLink a:hover {
+        color: var(--color-hover-primary);
+    }
+}
+.navbar-primary {
+    background-color: var(--color-primary);
+    color: var(--color-fontColor-secondary);
+
+    .navbarLink a {
+        text-decoration: none;
+        color: var(--color-fontColor-secondary);
+        transition: .3s;
+    }
+    .navbarLink a:hover {
+        color: var(--color-hover-secondary);
+    }
+}
+.navbar-secondary {
+    background-color: var(--color-secondary);
+    color: var(--color-fontColor-primary);
+
+    .navbarLink a {
+        text-decoration: none;
+        color: var(--color-fontColor-primary);
+        transition: .3s;
+    }
+    .navbarLink a:hover {
+        color: var(--color-hover-primary);
+    }
+}
+.navbarLogo {
+    font-size: 18px;
+}
+.navbarRight {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.navbarLinks {
+    display: flex;
+    font-size: 18px;
+    gap: 16px;
+    list-style: none;
+}
+
+.languageToggle {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+

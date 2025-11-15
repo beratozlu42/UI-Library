@@ -1,0 +1,21 @@
+import React from 'react'
+import { useNavigate } from 'react-router-dom'
+import styles from './index.module.css'
+import { Button } from '../../Components/Button'
+
+const home = () => {
+  const navigate = useNavigate();
+
+  return (
+    <>
+      <section className={styles.section}>
+        <div className={styles.center}>
+          <h1>Make your website more beautiful.</h1>
+          <Button onClick={() => navigate('/components')}>Start Exploring</Button>
+        </div>
+    </section>
+    </>
+  )
+}
+
+export default home

@@ -1,0 +1,126 @@
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-fontColor-secondary);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.required {
+  color: #ef4444;
+}
+
+.input {
+  width: 100%;
+  font-family: var(--fontFamily);
+  border-radius: var(--color-borderRadius);
+  border: 1px solid var(--color-gray-300);
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.input::placeholder {
+  color: var(--color-gray-700);
+  opacity: 0.7;
+}
+
+.input-sm {
+  max-width: 150px;
+  padding: 6px 12px;
+  font-size: 14px;
+  height: 32px;
+}
+
+.input-md {
+  max-width: 300px;
+  padding: 10px 16px;
+  font-size: 15px;
+  height: 40px;
+}
+
+.input-lg {
+  max-width: 450px;
+  padding: 12px 20px;
+  font-size: 16px;
+  height: 48px;
+}
+
+/* Variant styles */
+.input-primary {
+  background-color: white;
+  color: var(--color-fontColor-primary);
+  border-color: var(--color-gray-300);
+}
+
+.input-primary:focus {
+  border-color: var(--color-primary);
+}
+
+.input-secondary {
+  background-color: var(--color-gray-100);
+  color: var(--color-fontColor-primary);
+  border-color: var(--color-gray-200);
+
+  .label {
+    color: var(--color-fontColor-secondary) !important;
+  }
+}
+
+.input-secondary:focus {
+  border-color: var(--color-primary);
+  background-color: white;
+}
+
+.input-outline {
+  background-color: transparent;
+  color: var(--color-fontColor-primary);
+  border-color: var(--color-primary);
+}
+
+.input-outline:focus {
+  border-color: var(--color-hover-primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+/* States */
+.input-disabled {
+  background-color: var(--color-gray-100);
+  color: var(--color-gray-300);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.input-disabled:focus {
+  box-shadow: none;
+  border-color: var(--color-gray-300);
+}
+
+.input-error {
+  border-color: #ef4444;
+}
+
+.input-error:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.errorText {
+  font-size: 12px;
+  color: #ef4444;
+  margin-top: -4px;
+}
+
