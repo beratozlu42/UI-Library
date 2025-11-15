@@ -8,12 +8,14 @@ type ButtonProps = {
   size?: "sm" | "md" | "lg";
   disabled?: boolean;
   onClick?: () => void;
+  className?: string;
 };
 
 export const Button = ({
   children,
   variant = "primary",
   size = "md",
+  className,
   ...props
 }: ButtonProps) => {
   const baseStyle: React.CSSProperties = {
@@ -52,9 +54,15 @@ export const Button = ({
     },
   };
 
+  const buttonClasses = [
+    "button",
+    `button-${variant}`,
+    className
+  ].filter(Boolean).join(" ");
+
   return (
     <button
-      className={`button button-${variant}`}
+      className={buttonClasses}
       style={{ ...baseStyle, ...variants[variant] }}
       {...props}
     >

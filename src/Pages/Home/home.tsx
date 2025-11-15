@@ -10,8 +10,8 @@ const home = () => {
     <>
       <section className={styles.section}>
         <div className={styles.center}>
-          <h1>Make your website more beautiful.</h1>
-          <Button onClick={() => navigate('/components')}>Start Exploring</Button>
+          <h1 className={styles.fadeInLeft}>Make your website beautiful.</h1>
+          <Button className={styles.Button} onClick={() => navigate('/components')}>Start Exploring</Button>
         </div>
     </section>
     </>
