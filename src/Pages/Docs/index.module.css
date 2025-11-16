@@ -1,0 +1,38 @@
+.section {
+    color: white;
+    margin: 30px auto;
+    width: 90%;
+    transition: margin-left 0.3s ease, width 0.3s ease;
+    padding: 32px 16px;
+}
+
+.withSidebar {
+    margin-left: 250px;
+    margin-right: auto;
+    width: calc((100% - 250px) * 0.9);
+    max-width: calc((100vw - 250px) * 0.9);
+}
+
+.collapsedSidebar {
+    margin-left: 60px;
+    margin-right: auto;
+    width: calc((100% - 60px) * 0.9);
+    max-width: calc((100vw - 60px) * 0.9);
+}
+
+/* Ensure navbar logo is visible when sidebar is present */
+:global(.Navbar) {
+    z-index: 101 !important; /* Above sidebar */
+    position: relative;
+    transition: padding-left 0.3s ease;
+}
+
+/* Add padding to navbar when sidebar is expanded to keep logo visible */
+:global(body.sidebar-expanded .Navbar) {
+    padding-left: 260px !important; /* Sidebar width (250px) + small gap (10px) */
+}
+
+:global(body.sidebar-collapsed .Navbar) {
+    padding-left: 70px !important; /* Collapsed sidebar width (60px) + small gap (10px) */
+}
+

@@ -1,0 +1,6 @@
+.Navbar {
+    margin: 20px auto;
+    width: 80% !important;
+    box-shadow: 5px 5px 10px #00000048;
+    border-radius: 8px;
+}

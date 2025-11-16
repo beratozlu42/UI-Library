@@ -1,0 +1,15 @@
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 60vh;
+    padding: "48px 16px";
+    color: var(--color-fontColor-secondary);
+}
+.center {
+    width: 80%;
+}
+.center h1 {
+    margin: 20px 0;
+}

@@ -1,0 +1,103 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 70px;
+  height: calc(100vh - 70px);
+  background: var(--color-dark);
+  color: var(--color-fontColor-secondary);
+  transition: width 0.3s ease;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.collapsed {
+  width: 60px;
+}
+
+.expanded {
+  width: 250px;
+}
+
+.toggleButton {
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  color: var(--color-fontColor-secondary);
+  font-size: 24px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+}
+
+.toggleButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.content {
+  padding: 60px 16px 20px 16px; /* Top padding to account for toggle button */
+  flex: 1;
+  overflow-y: auto;
+}
+
+.title {
+  margin: 0 0 24px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-fontColor-secondary);
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nav a {
+  color: var(--color-fontColor-secondary);
+  text-decoration: none;
+  padding: 12px 16px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+}
+
+.nav a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-fontColor-primary, #fff);
+}
+
+.nav a.active {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: var(--color-fontColor-secondary, #fff);
+  font-weight: 500;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
